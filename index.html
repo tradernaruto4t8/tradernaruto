@@ -628,27 +628,48 @@
 
 <div class="bg-grid" aria-hidden="true"></div>
 
-<header id="header">
-  <a href="#main" class="logo">
-    <span class="mark" aria-hidden="true">↗</span>
-    <span>TRADER<span class="txt-sub">_NARUTO</span></span>
-  </a>
-  <nav aria-label="Primary">
-    <a href="#main" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#trading">Trading</a>
-    <a href="#projects">Projects</a>
-    <a href="#journey">Journey</a>
-    <a href="#tools">Tools</a>
-    <a href="#skills">Skills</a>
-    <a href="#notes">Notes</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div class="nav-right">
-    <a href="#contact" class="nav-cta">Let's Talk <span class="arrow" aria-hidden="true">→</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-      <span class="bar"></span>
+<header class="tc-header" id="header">
+  <div class="tc-header-inner">
+
+    <a href="#main" class="tc-logo">
+      <span class="tc-logo-mark">
+        <span class="tc-candle red"></span>
+        <span class="tc-candle green"></span>
+        <span class="tc-candle red small"></span>
+      </span>
+
+      <span class="tc-logo-text">
+        TRADING
+        <small>CHART</small>
+      </span>
+    </a>
+
+    <nav class="tc-desktop-nav" aria-label="Primary Navigation">
+      <a href="#main" class="active">Home</a>
+      <a href="#services">Courses &amp; Services</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#contact" class="tc-enroll-btn">Enroll Now</a>
+    </nav>
+
+    <button
+      class="tc-mobile-toggle"
+      id="tcMobileToggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
+
+  </div>
+
+  <div class="tc-mobile-menu" id="tcMobileMenu">
+    <a href="#main">Home</a>
+    <a href="#services">Courses &amp; Services</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#contact" class="tc-mobile-enroll">Enroll Now</a>
   </div>
 </header>
 
