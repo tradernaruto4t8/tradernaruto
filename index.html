@@ -1805,6 +1805,319 @@ button,
 
 ::-webkit-scrollbar-thumb:hover{
   background:var(--tc-gold);
+}/* =========================================
+   TRADER_NARUTO - PROFESSIONAL HEADER
+   ========================================= */
+
+.tc-header {
+  position: sticky;
+  top: 18px;
+  z-index: 9999;
+  width: min(1180px, calc(100% - 40px));
+  margin: 18px auto 0;
+  padding: 0;
+  background: rgba(24, 24, 24, 0.94);
+  border: 1px solid #303030;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.tc-header-inner {
+  min-height: 78px;
+  padding: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+/* ---------- LOGO ---------- */
+
+.tc-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.tc-logo-mark {
+  width: 42px;
+  height: 42px;
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px;
+  border-radius: 10px;
+  background: #111111;
+  border: 1px solid #333333;
+}
+
+.tc-logo-mark::before,
+.tc-logo-mark::after {
+  content: "";
+  display: block;
+  width: 5px;
+  border-radius: 2px;
+}
+
+.tc-logo-mark::before {
+  height: 22px;
+  background: #19c463;
+  box-shadow: 8px -7px 0 #ef4444;
+}
+
+.tc-logo-mark::after {
+  height: 15px;
+  background: #19c463;
+  box-shadow: 8px -10px 0 #ef4444;
+}
+
+.tc-logo-text {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.tc-logo-text small {
+  color: #ffc400;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  position: absolute;
+  left: 2px;
+  bottom: -12px;
+  white-space: nowrap;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+.tc-header nav,
+.tc-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  flex: 1;
+}
+
+.tc-header nav a,
+.tc-nav a {
+  position: relative;
+  padding: 28px 0;
+  color: #dddddd;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.tc-header nav a:hover,
+.tc-nav a:hover {
+  color: #ffc400;
+}
+
+.tc-header nav a.active,
+.tc-nav a.active {
+  color: #ffc400;
+}
+
+.tc-header nav a.active::after,
+.tc-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 17px;
+  height: 2px;
+  border-radius: 10px;
+  background: #ffc400;
+  box-shadow: 0 0 10px rgba(255, 196, 0, 0.45);
+}
+
+/* ---------- RIGHT SIDE ---------- */
+
+.tc-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.tc-header .tc-cta,
+.tc-header .nav-cta,
+.tc-header a[href*="contact"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 20px;
+  border-radius: 9px;
+  background: #ffb21c;
+  color: #111111 !important;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 1px solid #ffc400;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tc-header .tc-cta:hover,
+.tc-header .nav-cta:hover,
+.tc-header a[href*="contact"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(255, 178, 28, 0.25);
+}
+
+/* ---------- MOBILE BUTTON ---------- */
+
+.tc-mobile-toggle {
+  width: 42px;
+  height: 42px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #383838;
+  border-radius: 9px;
+  background: #171717;
+  cursor: pointer;
+}
+
+.tc-mobile-toggle span,
+.tc-mobile-toggle::before,
+.tc-mobile-toggle::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+.tc-mobile-toggle::before {
+  position: absolute;
+  transform: translateY(-7px);
+}
+
+.tc-mobile-toggle::after {
+  position: absolute;
+  transform: translateY(7px);
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .tc-header {
+    width: calc(100% - 24px);
+    top: 10px;
+    margin-top: 10px;
+    border-radius: 16px;
+  }
+
+  .tc-header-inner {
+    min-height: 70px;
+    padding: 0 18px;
+  }
+
+  .tc-header nav,
+  .tc-nav {
+    gap: 18px;
+  }
+
+  .tc-header nav a,
+  .tc-nav a {
+    font-size: 13px;
+  }
+
+  .tc-header .tc-cta,
+  .tc-header .nav-cta {
+    padding: 0 14px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 720px) {
+
+  .tc-header {
+    width: calc(100% - 20px);
+    top: 8px;
+    margin-top: 8px;
+    border-radius: 15px;
+  }
+
+  .tc-header-inner {
+    min-height: 64px;
+    padding: 0 14px;
+  }
+
+  .tc-logo-text {
+    font-size: 17px;
+  }
+
+  .tc-logo-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tc-header nav,
+  .tc-nav {
+    display: none;
+  }
+
+  .tc-header-right {
+    margin-left: auto;
+  }
+
+  .tc-header .tc-cta,
+  .tc-header .nav-cta,
+  .tc-header a[href*="contact"] {
+    display: none;
+  }
+
+  .tc-mobile-toggle {
+    display: inline-flex;
+    position: relative;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 420px) {
+
+  .tc-header {
+    width: calc(100% - 14px);
+  }
+
+  .tc-header-inner {
+    padding: 0 11px;
+  }
+
+  .tc-logo-text {
+    font-size: 15px;
+  }
+
+  .tc-logo-mark {
+    width: 33px;
+    height: 33px;
+  }
 }
 </style>
 </head>
